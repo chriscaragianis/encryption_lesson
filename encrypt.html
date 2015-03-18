@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<link rel = "stylesheet" href = "main.css">
+<script>
+    function cipher()
+    {   var a = parseInt(document.getElementById("a").value);
+		var b = parseInt(document.getElementById("b").value);
+		document.getElementById("cText").value = affine_string(a,b,document.getElementById("pText").value);
+
+		document.getElementById("step1").innerHTML = document.getElementById("pText").value.substring(0,1);
+		document.getElementById("step2").innerHTML = document.getElementById("pText").value.charCodeAt(0);
+		document.getElementById("step3").innerHTML = document.getElementById("pText").value.charCodeAt(0)*a;
+		document.getElementById("step4").innerHTML = document.getElementById("pText").value.charCodeAt(0)*a + b;
+		document.getElementById("step5").innerHTML = (document.getElementById("pText").value.charCodeAt(0)*a + b) % 95;
+		document.getElementById("step6").innerHTML = (document.getElementById("pText").value.charCodeAt(0)*a + b) % 95 + 32;
+		document.getElementById("step7").innerHTML = document.getElementById("cText").value.substring(0,1);
+		
+
+		document.getElementById("step1").style.display = "block";
+		document.getElementById("step2").style.display = "block";
+		document.getElementById("step3").style.display = "block";
+		document.getElementById("step4").style.display = "block";
+		document.getElementById("step5").style.display = "block";
+		document.getElementById("step6").style.display = "block";
+		document.getElementById("step7").style.display = "block";
+		document.getElementById("s_to2").style.display = "block";
+		document.getElementById("s_to3").style.display = "block";
+		document.getElementById("s_to4").style.display = "block";
+		document.getElementById("s_to5").style.display = "block";
+		document.getElementById("s_to6").style.display = "block";
+		document.getElementById("s_to7").style.display = "block";
+	}
+</script>
+<script src = "affine.js"></script>
+<script src = "frequency.js"></script>
+</head>
+
+<body>
+<h1>The Affine Cipher</h1>
+<div class = "bigWindow">
+
+<div class = "textWindow" id = "pText_div">
+	Plaintext
+	<textarea id = "pText" rows = "15" cols = "25"></textarea>
+	<span>"Plaintext" refers to the unencrypted content of your message.  Type or copy the message you would like to encrypt in this text box.</span>
+</div>
+
+<div class = "textWindow" id = "cText_div">
+	Ciphertext
+	<textarea id = "cText" rows = "15" cols = "25"></textarea>
+	<span>"Ciphertext" refers to the content of your message <em>after</em> it has been encrypted.  When you click the "Encrypt" button, the affine cipher you have chosen will be applied to your plaintext.  The result will appear in this text box.</span>
+</div>
+<div id = "step1" class = "step" title = "The original plaintext character...">"a"</div>
+<div id = "s_to2" class = "step">&#8594 </div>
+<div id = "step2" class = "step" title = "...is converted to its Unicode value">97</div>
+<div id = "s_to3" class = "step">&#8595 </div>
+<div id = "step3" class = "step" title = "We multiply by a...">133</div>
+<div id = "s_to4" class = "step">&#8592 </div>
+<div id = "step4" class = "step" title = "...add b...">139</div>
+<div id = "s_to5" class = "step">&#8595 </div>
+<div id = "step5" class = "step" title = "...then evaluate the result modulo 95.">24</div>
+<div id = "s_to6" class = "step">&#8594 </div>
+<div id = "step6" class = "step" title = "In order to get one of the 96 characters we can print with, we add 32 to the result.">54</div>
+<div id = "s_to7" class = "step">&#8595 </div>
+<div id = "step7" class = "step" title= "We take this result and return the character that corresponds to this Unicode value.">";"</div>
+
+<div class = "contrl"> 
+a
+<select id = "a">
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>	
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>11</option>
+	<option>12</option>
+	<option>13</option>
+	<option>14</option>
+	<option>16</option>
+</select>&nbsp &nbsp
+b
+<select id = "b">
+	<option>-8</option>
+	<option>-7</option>
+	<option>-6</option>
+	<option>-5</option>
+	<option>-4</option>
+	<option>-3</option>
+	<option>-2</option>
+	<option>1</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+</select>
+<button id = "encryptButton" onclick = "cipher()">Encrypt</button>
+<span>Choose the affine cipher you will apply.  </span>
+
+</div>
+
+<div class = "graphic" id = "example"></div>
+
+</div>
+</body>
+
+</html>

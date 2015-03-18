@@ -1,0 +1,180 @@
+body {
+	background-color: gray;
+	color: #cccccc;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+
+span {
+	display: none;
+	text-align: justify;
+}
+.bigWindow {
+	width: 80%;
+	 position: absolute;
+     top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+	min-width: 900px;
+}
+
+.textWindow {
+	width: 25%;
+	font-size: 32pt;
+	text-align: center;
+	margin: 50px;
+	padding: 20px;
+	border-color: #dddddd;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 30px;
+}
+
+
+
+.textWindow:hover span {
+	font-family: "Lucida Console";
+	font-size: 16pt;
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background-color: #222222;
+    left: 30%;
+    margin: 10px;
+    width: 70%;
+    position: absolute;
+    top: 85%;
+    text-decoration: none;
+	opacity: 0.4;
+}
+
+textarea {
+	margin: 10px 0px;
+}
+
+
+#pText_div{
+	float: left;
+	background-color: #223322;
+	top: 200px;
+}
+
+#cText_div{
+	float: right;
+	background-color: #332222;
+	top: -200px;
+}
+
+ 
+.contrl {
+	text-align: center;
+	font-size: 16pt;
+	
+	background-color: #222222;
+	width: 200px;
+	height: 80px;
+	padding: 10px;
+	clear: both;
+	/*top: 50%;*/
+	border-color: #dddddd;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 30px;
+	line-height: 250%;
+}
+
+
+.contrl:hover span {
+	font-family: "Lucida Console";
+	font-size: 16pt;
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background-color: #222222;
+    left: 30%;
+    margin: 10px;
+    width: 70%;
+    position: absolute;
+    top: 85%;
+    text-decoration: none;
+	opacity: 0.4;
+	line-height: 100%; 
+}
+
+.step {
+	font-size: 24pt;
+	text-align: center;
+	display: none;
+	width: 60px;
+}
+#step1 {
+	color: #aaffaa;
+	position: absolute;
+	top: 100px;
+	left: 40%; 
+	z-index: 99;
+}
+#step2 {
+	position: absolute;
+	top: 100px;
+	left: 54%;
+}
+
+#step3 {
+	position: absolute;
+	top: 200px;
+	left: 54%;
+}
+#step4 {
+	position: absolute;
+	top: 200px;
+	left: 40%;
+}
+#step5 {
+	position: absolute;
+	top: 300px;
+	left: 40%;
+}
+#step6 {
+	position: absolute;
+	top: 300px;
+	left: 54%;
+}
+#step7 {
+	color: #ffaaaa;
+	position: absolute;
+	top: 400px;
+	left: 54%;
+}
+#s_to2 {
+	position: absolute;
+	top: 100px;
+	left: 47%;
+}
+#s_to3 {
+	position: absolute;
+	top: 150px;
+	left: 54%;
+}
+#s_to4 {
+	position: absolute;
+	top: 200px;
+	left: 47%;
+}
+#s_to5 {
+	position: absolute;
+	top: 250px;
+	left: 40%;
+}
+#s_to6 {
+	position: absolute;
+	top: 300px;
+	left: 47%;
+}
+#s_to7 {
+	position: absolute;
+	top: 350px;
+	left: 54%;
+}
