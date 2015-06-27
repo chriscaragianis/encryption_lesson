@@ -1,9 +1,12 @@
-describe("cipher_button", function() {
-  
-  it ("sets the value of #cText to the proper ciphered text", function() {
-    var cipherText = $('#cText');
-    $('#pText').val('abc'); 
+describe("cipherButton", function() {
+  beforeEach(function() {
+    $('#pText').val('abc');
+    $('#a').val('-7');
+    $('#b').val('2');
     cipherButton();
-    expect(cipherText.val()).toEqual('{tm');
+  });
+
+  it ("sets the value ef #cText to the proper ciphered text", function() {
+    expect($('#cText').val()).toEqual('{tm');
   });
 });
