@@ -14,7 +14,7 @@ function mod(a,n) {
     return result + n;
 }
 
-function euclidean_gcd(a, b) {
+function euclideanGcd(a, b) {
   if (Math.abs(a) > Math.abs(b)) {
     var c = b;
     b = a;
@@ -23,5 +23,5 @@ function euclidean_gcd(a, b) {
   if (b % a == 0)
     return a;
   else
-    return euclidean_gcd(mod(b,a) , a);
+    return euclideanGcd(mod(b,a) , a);
 }

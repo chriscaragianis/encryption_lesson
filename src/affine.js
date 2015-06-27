@@ -1,5 +1,5 @@
 function Affine(a, b) {
-  if (euclidean_gcd(a, 96) != 1)
+  if (euclideanGcd(a, 96) != 1)
     throw "Bad Argument";
   this.a = a;
   this.b = b;
