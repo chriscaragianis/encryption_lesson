@@ -4,6 +4,7 @@ function Affine(a, b) {
   this.a = a;
   this.b = b;
   var a_1 = inverses[mod(a, 96)];
+
   this.transform = function(input) {
     return mod((a*input + b), 96) + 32;
   };
