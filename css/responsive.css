@@ -1,0 +1,37 @@
+
+/**************************************
+  MOBILE DISPLAY
+***************************************/
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+    text-align: center;
+  }
+
+  textarea {
+    width: 80%;
+    height: 200px;
+    margin: 5px 0 20px 0;
+    border-radius: 3%;
+    font-size: 10pt;
+  }
+  
+  .wrapper {
+    width: 100%;
+  } 
+
+  .text-window {
+    width: 90%;
+    margin-left: 5%;
+  }
+ 
+  #plaintext-div, #ciphertext-div {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .control {
+    width: 50%;
+    margin-left: 25%;
+  }

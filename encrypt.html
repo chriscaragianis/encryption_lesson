@@ -1,19 +1,21 @@
 <html>
   <head>
-    <link rel = "stylesheet" href = "main.css">
+    <link rel = "stylesheet" href = "css/normalize.css">
+    <link rel = "stylesheet" href = "css/main.css">
+    <link rel = "stylesheet" href = "css/responsive.css">
   </head>
   <body>
     <h1>The Affine Cipher</h1>
-    <div class = "bigWindow">
-      <div class = "textWindow" id = "pText_div">
+    <div class = "wrapper">
+      <div class = "text-window" id = "plaintext-div">
         Plaintext
         <textarea id = "pText" rows = "15" cols = "25"></textarea>
       </div>
-      <div class = "textWindow" id = "cText_div">
+      <div class = "text-window" id = "ciphertext-div">
         Ciphertext
         <textarea id = "cText" rows = "15" cols = "25"></textarea>
       </div>
-      <div class = "contrl"> 
+      <div class = "control"> 
         a
         <select id = "a">
           <option value="-11">-11</option>

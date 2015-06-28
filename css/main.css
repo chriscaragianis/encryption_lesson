@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  color: #cccccc;
+  font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+
+.wrapper {
+}
+
+.text-window {
+  width: 25%;
+  font-size: 32pt;
+  text-align: center;
+  border-color: #dddddd;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+
+textarea {
+margin: 10px 0px;
+}
+
+
+#plaintext-div{
+float: left;
+background-color: #223322;
+top: 200px;
+}
+
+#ciphertext-div{
+float: right;
+background-color: #332222;
+top: -200px;
+}
+
+ 
+.control {
+text-align: center;
+font-size: 16pt;
+
+background-color: #222222;
+padding: 10px;
+clear: both;
+/*top: 50%;*/
+border-color: #dddddd;
+border-width: 3px;
+border-style: solid;
+border-radius: 30px;
+line-height: 250%;
+}
+
+
+.contrl:hover span {
+font-family: "Lucida Console";
+font-size: 16pt;
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background-color: #222222;
+    left: 30%;
+    margin: 10px;
+    width: 70%;
+    position: absolute;
+    top: 85%;
+    text-decoration: none;
+opacity: 0.4;
+line-height: 100%; 
+}
