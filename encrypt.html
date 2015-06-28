@@ -8,26 +8,11 @@
       <div class = "textWindow" id = "pText_div">
         Plaintext
         <textarea id = "pText" rows = "15" cols = "25"></textarea>
-        <span>"Plaintext" refers to the unencrypted content of your message.  Type or copy the message you would like to encrypt in this text box.</span>
       </div>
       <div class = "textWindow" id = "cText_div">
         Ciphertext
         <textarea id = "cText" rows = "15" cols = "25"></textarea>
-        <span>"Ciphertext" refers to the content of your message <em>after</em> it has been encrypted.  When you click the "Encrypt" button, the affine cipher you have chosen will be applied to your plaintext.  The result will appear in this text box.</span>
       </div>
-      <div id = "step1" class = "step" title = "The original plaintext character...">"a"</div>
-      <div id = "s_to2" class = "step">&#8594 </div>
-      <div id = "step2" class = "step" title = "...is converted to its Unicode value">97</div>
-      <div id = "s_to3" class = "step">&#8595 </div>
-      <div id = "step3" class = "step" title = "We multiply by a...">133</div>
-      <div id = "s_to4" class = "step">&#8592 </div>
-      <div id = "step4" class = "step" title = "...add b...">139</div>
-      <div id = "s_to5" class = "step">&#8595 </div>
-      <div id = "step5" class = "step" title = "...then evaluate the result modulo 95.">24</div>
-      <div id = "s_to6" class = "step">&#8594 </div>
-      <div id = "step6" class = "step" title = "In order to get one of the 96 characters we can print with, we add 32 to the result.">54</div>
-      <div id = "s_to7" class = "step">&#8595 </div>
-      <div id = "step7" class = "step" title= "We take this result and return the character that corresponds to this Unicode value.">";"</div>
       <div class = "contrl"> 
         a
         <select id = "a">
@@ -59,10 +44,7 @@
           <option>8</option>
         </select>
         <button id = "cipherbutton">Encrypt</button>
-        <span>Choose the affine cipher you will apply.  </span>
       </div> 
-      <div class = "graphic" id = "example">
-      </div>
     </div>
     <script src = "src/jquery-2.1.4.js"></script>
     <script src = "src/mathHelper.js"></script>
