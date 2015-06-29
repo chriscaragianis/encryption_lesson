@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: yellow;
+  background-color: #222;
   color: #cccccc;
   font-family: Source Code Pro;
 }
@@ -63,7 +63,7 @@ textarea {
 }
 
 .control {
-  background-color: #010;
+  background-color: #021002;
   max-width: 50%;
   float: left;
   clear: left;
@@ -91,13 +91,13 @@ textarea {
 
 #plaintext-div{
 float: left;
-background-color: #010;
+background-color: #021002;
 top: 200px;
 }
 
 #ciphertext-div{
 float: right;
-background-color: #100;
+background-color: #100202;
 top: -200px;
 }
 
