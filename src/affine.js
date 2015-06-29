@@ -15,16 +15,16 @@ function Affine(a, b) {
 
   this.cipher = function(word) {
     var result = '';
-    for (var v of word) {
-      result += String.fromCharCode(this.transform(v.charCodeAt(0)));
+    for (var i = 0; i < word.length; i++) {
+      result += String.fromCharCode(this.transform(word[i].charCodeAt(0)));
     }
     return result;
   };
 
   this.decipher = function(word) {
     var result = '';
-    for (var v of word) {
-      result += String.fromCharCode(this.invert(v.charCodeAt(0)));
+    for (var i = 0; i < word.length; i++) {
+      result += String.fromCharCode(this.invert(word[i].charCodeAt(0)));
     }
     return result;
   };
