@@ -1,52 +1,46 @@
 <html>
   <head>
     <link rel = "stylesheet" href = "css/normalize.css">
-    <link rel = "stylesheet" href = "css/main.css">
-    <link rel = "stylesheet" href = "css/responsive.css">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link rel = "stylesheet" href = "css/main.css">  
   </head>
   <body>
-    <h1>The Affine Cipher</h1>
+    <header>
+      <span class="headline">The<br><span>A</span>ffine<br> Cipher</span>
+      <div class="secret">
+        bvJ_b_:ry]CVCy `bNyd_'bCr]O'bfy.ydb]CVb{'_Vnbmy ]_mV_VOdb{fCrC]mC Qb_.CV`b&y _mb{bfC{'b._mVO]`b}_fb]CVb{'_VbCr]O'b'{OdC]`bG{_m_ {]bmy QO_b.CQO.{b{mbkO{'bHCH_dd{b _mbmy ]_mV_VOdb{ V_bJ_ fd_dCV`b\&y _mb_Vb'y..C]bfy.yd`b2d{_]_ Vb_VbfC{'b_Q_Vb.Ct_dyb_Q_]V{]b'{VVC]b]CVb{'_VbHCV{_b{OQO_`b@{'bVC mCfO Vbmy QO_b_ C'nbOVbrydV{b.yd_'b.{mC C{bmy ]_mV_VOd`b\&y _mbOVb.Ct_dyb]_fb{dmObH_JCmO.{bO.VdCmC_]b{b y bVydVyd`bNyd_'bCr]O'bfy.ydb]CVb{'_Vnbmy ]_mV_VOdb{fCrC]mC Qb_.CV`b;_ _{ bOVbQd{HCf{b.yd_'`boVbVOdrC]bX_.C]nbrO.HC {db{b]_'r_db]_fnb{fCrC]mC QbCfbfy.yd`b2_.._ V_]kO_b{OmVydb C]CbCfb'{Q {bmy ]_kO{Vb]{QCVVC]`b-Od{tCVOdbf{rCtO]b_ C'b]CVb{'_Vb_.CVbrJ{d_Vd{bVC mCfO VbX_OQC{Vb C].bC'r_dfC_V`boVbmy H{..C]b.Ct_dybC bOd {bO.VdCm_]b{mmO']{ `b\&y _mb]_fbyfCyb_dy]`b\&y _mbHCH_dd{b'CbkOC]bkO{'brO.HC {db{Vb'{._]O{f{b{dmObdJy mO]`b-O'b]ymCC]b {VykO_br_ {VCtO]b_Vb'{Q C]bfC]br{dVOdC_ Vb'y V_]nb {]m_VOdbdCfCmO.O]b'O]`bc bdOVdO'b{mmO']{ bO.VdCmC_]`bG{OdC]bHCV{_b C]Cb{Vb]_'bX{mC.C]C]b]_'r_db{mbC b_]V`\<
+      </div>
+      <br class="clear">
+    </header>
     <div class = "wrapper">
       <div class = "text-window" id = "plaintext-div">
-        Plaintext
-        <textarea id = "pText" rows = "15" cols = "25"></textarea>
+        <span>>Okay Alice,<br>
+              >Enter the text you wish to send. <br>
+              >Select your affine cipher parameters and click OK.
+        </span>
+        <textarea spellcheck="false" id = "pText"></textarea>
+        <div class = "control"> 
+          <div> 
+            a
+            <textarea id = "a">
+            </textarea>
+          </div>
+          <div>          
+            b
+            <textarea id = "b">
+            </textarea>
+          </div>
+         <button id = "cipherbutton">OK</button>
+       </div>
       </div>
       <div class = "text-window" id = "ciphertext-div">
-        Ciphertext
-        <textarea id = "cText" rows = "15" cols = "25"></textarea>
+        <span>>Copy the ciphertext and send it to Bob. <br>
+              >If he knows your parameters,<br> 
+              >he will be able to read your message.<br>
+              >Good Luck!
+        </span>
+        <textarea spellcheck="false" id = "cText"></textarea>
       </div>
-      <div class = "control"> 
-        a
-        <select id = "a">
-          <option value="-11">-11</option>
-          <option value="-7">-7</option>
-          <option value="-5">-5</option>
-          <option value="1">1</option>  
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="11">11</option>
-        </select>&nbsp &nbsp
-        b
-        <select id = "b">
-          <option>-8</option>
-          <option>-7</option>
-          <option>-6</option>
-          <option>-5</option>
-          <option>-4</option>
-          <option>-3</option>
-          <option>-2</option>
-          <option>1</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
-        <button id = "cipherbutton">Encrypt</button>
-      </div> 
     </div>
     <script src = "src/jquery-2.1.4.js"></script>
     <script src = "src/mathHelper.js"></script>
