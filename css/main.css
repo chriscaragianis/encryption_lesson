@@ -9,7 +9,7 @@
 body {
   background-color: #222;
   color: #cccccc;
-  font-family: Source Code Pro;
+  font-family: Source Code Pro, Lucida Console, monospace;
 }
 
 .overlay {
