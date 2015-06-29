@@ -1,6 +1,6 @@
 function Affine(a, b) {
-  if (euclideanGcd(a, 96) != 1)
-    throw "Bad Argument";
+  if (a == 0 || euclideanGcd(a, 96) != 1)
+    $('.overlay').show();
   this.a = a;
   this.b = b;
   var a_1 = inverses[mod(a, 96)];
@@ -29,3 +29,6 @@ function Affine(a, b) {
     return result;
   };
 }
+
+
+$('.dismiss-overlay').on('click', function() {$('.overlay').hide();});

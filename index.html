@@ -5,6 +5,13 @@
     <link rel = "stylesheet" href = "css/main.css">  
   </head>
   <body>
+    <div class="overlay">
+      Error: Invalid choice of 'a'<br><br>
+      The choice of a must be relatively prime to 96.  The reasons are because of this and that.
+      <div class="dismiss-overlay">
+        OK
+      </div>
+    </div>
     <header>
       <span class="headline">The<br><span>A</span>ffine<br> Cipher</span>
       <div class="secret">
@@ -12,26 +19,25 @@
       </div>
       <br class="clear">
     </header>
-    <div class = "wrapper">
-      <div class = "text-window" id = "plaintext-div">
-        <span>>Okay Alice,<br>
-              >Enter the text you wish to send. <br>
-              >Select your affine cipher parameters and click OK.
-        </span>
-        <textarea spellcheck="false" id = "pText"></textarea>
-        <div class = "control"> 
-          <div> 
-            a
-            <textarea id = "a">
-            </textarea>
-          </div>
-          <div>          
-            b
-            <textarea id = "b">
-            </textarea>
-          </div>
-         <button id = "cipherbutton">OK</button>
-       </div>
+    <div class = "text-window" id = "plaintext-div">
+      <span>>Okay Alice,<br>
+            >Enter the text you wish to send. <br>
+            >Select your affine cipher parameters and click OK.
+      </span>
+      <textarea spellcheck="false" id = "pText"></textarea>
+      <div class = "control"> 
+        <div> 
+          a
+          <textarea id = "a">
+          </textarea>
+        </div>
+        <div>          
+          b
+          <textarea id = "b">
+          </textarea>
+        </div>
+        <button id = "cipherbutton">OK</button>
+        </div>
       </div>
       <div class = "text-window" id = "ciphertext-div">
         <span>>Copy the ciphertext and send it to Bob. <br>
@@ -41,7 +47,6 @@
         </span>
         <textarea spellcheck="false" id = "cText"></textarea>
       </div>
-    </div>
     <script src = "src/jquery-2.1.4.js"></script>
     <script src = "src/mathHelper.js"></script>
     <script src = "src/affine.js"></script>

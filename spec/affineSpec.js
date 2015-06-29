@@ -1,8 +1,19 @@
 describe("Affine", function() {
-  it("throws exception on bad value of 'a'", function() {
-    expect(Affine.bind(null, 0, 3)).toThrow();
-    expect(Affine.bind(null, -3, 3)).toThrow();
+  it("displays overlay on bad a", function() {
+    var aff1 = new Affine(0,3);
+    expect($('.overlay').css("display")).toEqual("block");
   });
+  it("displays overlay on bad a", function() {
+    $('.overlay').hide();
+    var aff2 = new Affine(-3,3);
+    expect($('.overlay').css("display")).toEqual("block");
+  });
+  it("does not display overlay on good a", function() {
+    $('.overlay').hide();
+    var aff2 = new Affine(-7,3);
+    expect($('.overlay').css("display")).toEqual("none");
+  });
+  
 });
 
 describe("cipher", function() {
