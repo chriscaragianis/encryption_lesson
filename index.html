@@ -6,10 +6,17 @@
     <link rel = "stylesheet" href = "css/main.css">  
   </head>
   <body>
-    <div class="overlay">
+    <div class="overlay" id="bad-a">
       Error: Invalid choice of 'a'<br><br>
-      The choice of a must be relatively prime to 96.  The reasons are because of this and that.
+      The choice of 'a' must be <em>relatively prime to 96</em>.  That means that 'a' and 96 can't have any common factros greater than one.  Otherwise Bob won't be able to decode our message!  Try one of these for 'a': -7, 1, 5, 11, -385. There are lots more, see if you can find some!
       <div class="dismiss-overlay">
+        OK
+      </div>
+    </div>
+    <div class="overlay" id="bad-b">
+      Error: Invalid choice of 'b'<br><br>
+      There seems to be a problem with your choice for 'b'.  You can choose any whole number for 'b'.  Maybe forgot to enter anything, or entered somethig other than a number?  
+    <div class="dismiss-overlay">
         OK
       </div>
     </div>
@@ -29,12 +36,12 @@
       <div class = "control"> 
         <div> 
           a
-          <textarea id = "a">
+          <textarea id = "a" class="clearable">
           </textarea>
         </div>
         <div>          
           b
-          <textarea id = "b">
+          <textarea id = "b" class="clearable">
           </textarea>
         </div>
         <button id = "cipherbutton">OK</button>
@@ -46,7 +53,7 @@
               >he will be able to read your message.<br>
               >Good Luck!
         </span>
-        <textarea spellcheck="false" id = "cText"></textarea>
+        <textarea spellcheck="false" class="clearable" id = "cText"></textarea>
       </div>
     <script src = "src/jquery-2.1.4.js"></script>
     <script src = "src/mathHelper.js"></script>
