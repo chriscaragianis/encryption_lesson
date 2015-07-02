@@ -17,19 +17,18 @@ body {
   position: fixed;
   top: 40%;
   left: 10%;
-  min-width: 80%;
-  min-height: 100px;
-  background-color: rgba(10, 10, 10, 0.8);
+  width: 80%;
+  background-color: rgba(10, 10, 10, 0.9);
   color: #eee;  
   box-shadow: 0 0 100px tomato;
+  padding: 10px;
 }
 
 .dismiss-overlay {
-  text-align: center;
-  position: absolute;
+  float: right;
   bottom: 0;
-  right: 0;
-  min-width: 5em;
+  text-align: center;
+  width: 5em;
   margin-top: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -85,6 +84,7 @@ textarea {
   border: 0;
   height: 20%;
   width: 50%;
+  resize: none;
 }
 
 .control {
