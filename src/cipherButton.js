@@ -1,3 +1,4 @@
+$('.clearable').val('');
 
 function cipherButton() {
   $('#plaintext-div').scrollTop();
