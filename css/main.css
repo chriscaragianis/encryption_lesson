@@ -23,7 +23,7 @@ img {
 body {
   background-color: #222;
   color: #cccccc;
-  font-family: Source Code Pro, Lucida Console, monospace;
+  font-family: "Source Code Pro", "Lucida Console", monospace;
 }
 
 .overlay {
@@ -51,7 +51,7 @@ body {
 
 header {
   background-color: #222;
-  height 100%;
+  height: 100%;
 }
 
 .clear {
