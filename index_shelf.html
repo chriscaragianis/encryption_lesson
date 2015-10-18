@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro&amp;ubset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" href = "css/normalize.css">
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <link rel = "stylesheet" href = "css/main.css"> 
+    <title>
+      The Affine Cipher
+    </title> 
+  </head>
+  <body>
+    <div class="overlay" id="bad-a">
+      Error: Invalid choice of 'a'<br><br>
+      The choice of 'a' must be <em>relatively prime to 96</em>.  That means that 'a' and 96 can't have any common factros greater than one.  Otherwise Bob won't be able to decode our message!  Try one of these for 'a': -7, 1, 5, 11, -385. There are lots more, see if you can find some!
+      <div class="dismiss-overlay">
+        OK
+      </div>
+    </div>
+    <div class="overlay" id="bad-b">
+      Error: Invalid choice of 'b'<br><br>
+      There seems to be a problem with your choice for 'b'.  You can choose any whole number for 'b'.  Maybe forgot to enter anything, or entered somethig other than a number?  
+    <div class="dismiss-overlay">
+        OK
+      </div>
+    </div>
+    <header>
+      <span class="headline">The<br><span>A</span>ffine<br> Cipher</span>
+      <img src="assets/chalk.jpg" alt="Chalkboard diagram of an affine cipher.">
+      <div class="secret">
+        bvJ_b_:ry]CVCy `bNyd_'bCr]O'bfy.ydb]CVb{'_Vnbmy ]_mV_VOdb{fCrC]mC Qb_.CV`b&amp;y _mb{bfC{'b._mVO]`b}_fb]CVb{'_VbCr]O'b'{OdC]`bG{_m_ {]bmy QO_b.CQO.{b{mbkO{'bHCH_dd{b _mbmy ]_mV_VOdb{ V_bJ_ fd_dCV`b\&amp;y _mb_Vb'y..C]bfy.yd`b2d{_]_ Vb_VbfC{'b_Q_Vb.Ct_dyb_Q_]V{]b'{VVC]b]CVb{'_VbHCV{_b{OQO_`b@{'bVC mCfO Vbmy QO_b_ C'nbOVbrydV{b.yd_'b.{mC C{bmy ]_mV_VOd`b\&amp;y _mbOVb.Ct_dyb]_fb{dmObH_JCmO.{bO.VdCmC_]b{b y bVydVyd`bNyd_'bCr]O'bfy.ydb]CVb{'_Vnbmy ]_mV_VOdb{fCrC]mC Qb_.CV`b;_ _{ bOVbQd{HCf{b.yd_'`boVbVOdrC]bX_.C]nbrO.HC {db{b]_'r_db]_fnb{fCrC]mC QbCfbfy.yd`b2_.._ V_]kO_b{OmVydb C]CbCfb'{Q {bmy ]_kO{Vb]{QCVVC]`b-Od{tCVOdbf{rCtO]b_ C'b]CVb{'_Vb_.CVbrJ{d_Vd{bVC mCfO VbX_OQC{Vb C].bC'r_dfC_V`boVbmy H{..C]b.Ct_dybC bOd {bO.VdCm_]b{mmO']{ `b\&amp;y _mb]_fbyfCyb_dy]`b\&amp;y _mbHCH_dd{b'CbkOC]bkO{'brO.HC {db{Vb'{._]O{f{b{dmObdJy mO]`b-O'b]ymCC]b {VykO_br_ {VCtO]b_Vb'{Q C]bfC]br{dVOdC_ Vb'y V_]nb {]m_VOdbdCfCmO.O]b'O]`bc bdOVdO'b{mmO']{ bO.VdCmC_]`bG{OdC]bHCV{_b C]Cb{Vb]_'bX{mC.C]C]b]_'r_db{mbC b_]V`\&lt;
+      </div>
+      <br class="clear">
+    </header>
+    <div class = "text-window" id = "plaintext-div">
+      <span>>Okay Alice,<br>
+            >Enter the text you wish to send. <br>
+            >Select your affine cipher parameters and click OK.
+      </span>
+      <textarea spellcheck="false" id = "pText"></textarea>
+      <div class = "control"> 
+        <div> 
+          a
+          <textarea maxlength=4 id = "a" class="clearable">
+          </textarea>
+        </div>
+        <div>          
+          b
+          <textarea maxlength=4 id = "b" class="clearable">
+          </textarea>
+        </div>
+        <button id = "cipherbutton">OK</button>
+        </div>
+      </div>
+      <div class = "text-window" id = "ciphertext-div">
+        <span>>Copy the ciphertext and send it to Bob. <br>
+              >If he knows your parameters,<br> 
+              >he will be able to read your message.<br>
+              >Good Luck!
+        </span>
+        <textarea spellcheck="false" class="clearable" id = "cText"></textarea>
+      </div>
+    <script src = "src/jquery-2.1.4.js"></script>
+    <script src = "src/mathHelper.js"></script>
+    <script src = "src/affine.js"></script>
+    <script src = "src/cipherButton.js"></script>
+  </body>
+</html>
