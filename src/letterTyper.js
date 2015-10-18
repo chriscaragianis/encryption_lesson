@@ -1,4 +1,4 @@
-var LetterTyper = class {
+function LetterTyper(options) {
 
   //options {
   //
@@ -9,12 +9,32 @@ var LetterTyper = class {
   //  target: JQuery object to fill with text
   //
   //}
-  constructor(options) {
-    this.options = options;
-  }
-
-  start() {
-  }
-
+  this.options = options;
+  this.place = 0;
+  this.intervalID = null;
 }
+
+
+LetterTyper.prototype = {
+  printNext: function() {
+    if (this.place >= this.options.text.length - 1) {
+      this.stop();
+    }
+
+    this.options.target.text(this.options.target.text() +
+      this.options.text[this.place]);
+
+    this.place += 1;
+  },
+
+  start: function() {
+    var that = this;
+    this.intervalID = setInterval(function(){that.printNext()}, that.options.speed);
+  },
+
+  stop: function() {
+    var that = this;
+    clearInterval(this.intervalID);
+  }
+};
 
