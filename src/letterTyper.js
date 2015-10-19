@@ -21,8 +21,7 @@ LetterTyper.prototype = {
       this.stop();
     }
 
-    this.options.target.text(this.options.target.text() +
-      this.options.text[this.place]);
+    this.options.target.text(this.options.target.text() + this.options.text[this.place]);
 
     this.place += 1;
   },

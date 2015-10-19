@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="testMessage">
+    </div>
+    <script src = "src/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="src/letterTyper.js"></script>
+    <script type="text/javascript">
+      var options = {
+        text: "Lorem ipsum dolor sit amet, ut rebum debet eam, no usu intellegat forensibus vituperata. Cu aeque accusam qui. Sed in reque lorem feugiat. Utinam facilisi erroribus ne ius, eam nullam atomorum conclusionemque ex, vel nihil volumus theophrastus an. Solet minimum ne nam. Qui in elit legimus vituperatoribus, an vix alii cibo torquatos.",
+        target: $('#testMessage'),
+        speed: 50,
+      };
+      var typist = new LetterTyper(options);
+      typist.start();
+    </script>
+  </body>
+</html>
