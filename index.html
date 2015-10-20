@@ -13,14 +13,14 @@
   <body>
     <div class="overlay" id="bad-a">
       Error: Invalid choice of 'a'<br><br>
-      The choice of 'a' must be <em>relatively prime to 96</em>.  That means that 'a' and 96 can't have any common factros greater than one.  Otherwise Bob won't be able to decode our message!  Try one of these for 'a': -7, 1, 5, 11, -385. There are lots more, see if you can find some!
+      The choice of 'a' must be <em>relatively prime to 96</em>.  That means that 'a' and 96 can't have any common factors greater than one.  Otherwise Bob won't be able to decode our message!  Try one of these for 'a': -7, 1, 5, 11, -385. There are lots more, see if you can find some!
       <div class="dismiss-overlay">
         OK
       </div>
     </div>
     <div class="overlay" id="bad-b">
       Error: Invalid choice of 'b'<br><br>
-      There seems to be a problem with your choice for 'b'.  You can choose any whole number for 'b'.  Maybe forgot to enter anything, or entered somethig other than a number?
+      There seems to be a problem with your choice for 'b'.  You can choose any whole number for 'b'.  Maybe you forgot to enter anything, or entered something other than a number?
     <div class="dismiss-overlay">
         OK
       </div>
@@ -35,9 +35,9 @@
     </header>
     <div class = "text-window" id = "plaintext-div">
 
-      <span id="line0" class="line">></span>
-      <span id="line1" class="line">></span>
-      <span id="line2" class="line">></span>
+      <span class="line">></span>
+      <span class="line">></span>
+      <span class="line">></span>
       <textarea spellcheck="false" id = "pText"></textarea>
       <div class = "control">
         <div>
@@ -49,8 +49,8 @@
           b
           <textarea maxlength=4 id = "b" class="clearable">
           </textarea>
-        </div>
         <button id = "cipherbutton">OK</button>
+        </div>
         </div>
       </div>
       <div class = "text-window" id = "ciphertext-div">
