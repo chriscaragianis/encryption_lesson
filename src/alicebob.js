@@ -1,7 +1,7 @@
 var lines = [
-  "Okay Alice,",
+  "Okay Alice...",
   "Enter the message you want to send to Bob.",
-  "Choose your affine cipher parameters and hit SEND.",
+  "Choose your affine cipher parameters and hit OK.",
   "Copy the ciphertext and send it to Bob.",
   "If he knows your parameters,",
   "He will be able to read your message.",

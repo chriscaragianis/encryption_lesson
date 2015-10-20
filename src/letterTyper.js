@@ -20,7 +20,7 @@ function LetterTyper(options) {
 
 LetterTyper.prototype = {
   printNext: function() {
-    if (this.place >= this.options.text[this.i].length - 1) {
+    if (this.place >= this.options.text[this.i].length) {
       this.i += 1; 
       this.place = 0;
     }
