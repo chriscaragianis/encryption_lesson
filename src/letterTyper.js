@@ -2,38 +2,46 @@ function LetterTyper(options) {
 
   //options {
   //
-  //  text: the text to be typed
+  //  text: array of strings to be typed
   //  speed: ms per letter
   //  blink: (boolean) include a blinking cursor
   //  blinkColor: (string) color of cursor
-  //  target: JQuery object to fill with text
+  //  targets array of DOM nodes to fill with text
+  //  next: function to call on completion
+  //  i: array index
   //
   //}
   this.options = options;
   this.place = 0;
+  this.i = 0;
   this.intervalID = null;
 }
 
 
 LetterTyper.prototype = {
   printNext: function() {
-    if (this.place >= this.options.text.length - 1) {
+    if (this.place >= this.options.text[this.i].length - 1) {
+      this.i += 1; 
+      this.place = 0;
+    }
+    if (this.i >= this.options.text.length) {
       this.stop();
+      return;
     }
 
-    this.options.target.text(this.options.target.text() + this.options.text[this.place]);
+    this.options.targets[this.i].text(this.options.targets[this.i].text() + this.options.text[this.i][this.place]);
 
     this.place += 1;
   },
 
   start: function() {
     var that = this;
-    this.intervalID = setInterval(function(){that.printNext()}, that.options.speed);
+    this.intervalID = setInterval(function(){that.printNext();}, that.options.speed);
   },
 
   stop: function() {
-    var that = this;
     clearInterval(this.intervalID);
   }
+ 
 };
 

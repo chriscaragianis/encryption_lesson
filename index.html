@@ -34,9 +34,10 @@
       <br class="clear">
     </header>
     <div class = "text-window" id = "plaintext-div">
-      <span class="line"></span><br/>
-      <span class="line"></span><br/>
-      <span class="line"></span><br/>
+
+      <span id="line0" class="line">></span>
+      <span id="line1" class="line">></span>
+      <span id="line2" class="line">></span>
       <textarea spellcheck="false" id = "pText"></textarea>
       <div class = "control">
         <div>
@@ -53,11 +54,10 @@
         </div>
       </div>
       <div class = "text-window" id = "ciphertext-div">
-        <span>>Copy the ciphertext and send it to Bob. <br>
-              >If he knows your parameters,<br>
-              >he will be able to read your message.<br>
-              >Good Luck!
-        </span>
+        <span class="line">></span>
+        <span class="line">></span><br>
+        <span class="line">></span><br>
+        <span class="line">></span>
         <textarea spellcheck="false" class="clearable" id = "cText"></textarea>
       </div>
     <script src = "src/jquery-2.1.4.js"></script>

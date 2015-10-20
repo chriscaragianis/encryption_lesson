@@ -2,21 +2,27 @@ var lines = [
   "Okay Alice,",
   "Enter the message you want to send to Bob.",
   "Choose your affine cipher parameters and hit SEND.",
-  "Copy the cpihertext and send it to Bob.",
+  "Copy the ciphertext and send it to Bob.",
   "If he knows your parameters,",
   "He will be able to read your message.",
   "Good Luck!"
   ];
 
+var targets = [];
 
-var typists = [];
-
-for (var i = 0; i < 3; i += 1) {
-  typists.push(new LetterTyper({
-    text: lines[i],
-    target: $($('.line').get(i)),
-    speed: 50}));
+for (var i = 0; i < 7; i += 1) {
+  targets.push($($('.line').get(i)));
 }
 
-typists[0].start();
-var set1 = setTimeout(typists[1].start(), 1500);
+var typist = new LetterTyper({
+  text: lines,
+  targets: targets,
+  speed: 50,
+});
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > $('#plaintext-div').offset().top - $(window).height()) {
+    typist.start();
+    $(window).off();
+  }
+});
